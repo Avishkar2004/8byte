@@ -77,11 +77,7 @@ export async function GET() {
         let earnData: EarningsResponse;
 
         if (BACKEND_URL) {
-          [cmpData, peData, earnData] = await Promise.all<[
-            CmpResponse,
-            PeResponse,
-            EarningsResponse
-          ]>([
+          [cmpData, peData, earnData] = await Promise.all([
             fetchBackend<CmpResponse>(`/api/cmp/${h.symbol}`),
             fetchBackend<PeResponse>(`/api/pe/${h.symbol}`),
             fetchBackend<EarningsResponse>(`/api/earnings/${h.symbol}`),
