@@ -10,6 +10,10 @@
 - **Problem**: Backend URL not configured in Vercel
 - **Solution**: Need to set `BACKEND_URL` environment variable
 
+### 3. ESLint Errors
+- **Problem**: Build failing due to ESLint errors (unescaped entities, TypeScript any types)
+- **Solution**: Fixed unescaped apostrophe and added proper TypeScript types
+
 ## Steps to Deploy Successfully
 
 ### Step 1: Update Dependencies (Already Done)
@@ -18,7 +22,13 @@ The package.json has been updated with:
 - React DOM: `^18.3.1`
 - React Types: `^18`
 
-### Step 2: Configure Environment Variables in Vercel
+### Step 2: Fix ESLint Errors (Already Done)
+The following ESLint errors have been fixed:
+- Fixed unescaped apostrophe in PortfolioSummary.tsx (`Today's` → `Today&apos;s`)
+- Removed `any` type in PortfolioTable.tsx (proper typing for header click handler)
+- Added proper TypeScript types for CustomTooltip in StockChart.tsx
+
+### Step 3: Configure Environment Variables in Vercel
 
 1. Go to your Vercel dashboard
 2. Select your project (8byte)
@@ -28,7 +38,7 @@ The package.json has been updated with:
    - **Value**: Your Railway backend URL (e.g., `https://your-app-name.railway.app`)
    - **Environment**: Production (and Preview if needed)
 
-### Step 3: Redeploy
+### Step 4: Redeploy
 
 1. In Vercel dashboard, go to Deployments
 2. Click "Redeploy" on your latest deployment

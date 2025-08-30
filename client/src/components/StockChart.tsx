@@ -22,7 +22,11 @@ const StockChart: React.FC<StockChartProps> = ({ data }) => {
       }));
   }, [data]);
 
-  const CustomTooltip = ({ active, payload, label }: any) => {
+  const CustomTooltip = ({ active, payload, label }: {
+    active?: boolean;
+    payload?: Array<{ payload: { name: string; value: number; change: number; changePercent: number } }>;
+    label?: string;
+  }) => {
     if (active && payload && payload.length) {
       const d = payload[0].payload;
       return (

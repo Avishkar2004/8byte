@@ -166,7 +166,7 @@ const PortfolioTable: React.FC<PortfolioTableProps> = ({ data, filter = "", dens
                     {headers.map(({ key, label }) => (
                       <th
                         key={key}
-                        onClick={() => onHeaderClick(key as any)}
+                        onClick={() => onHeaderClick(key)}
                         className={`px-6 ${rowPad} text-left text-[11px] font-medium text-gray-200 uppercase tracking-wider cursor-pointer hover:text-white sticky top-0 z-[5] bg-[#0e1628]`}
                       >
                         <div className="flex items-center">

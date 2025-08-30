@@ -56,7 +56,7 @@ const PortfolioSummary: React.FC<PortfolioSummaryProps> = ({ data }) => {
       </div>
 
       <div className="card p-6">
-        <p className="text-xs font-medium text-gray-400">Today's Change</p>
+        <p className="text-xs font-medium text-gray-400">Today&apos;s Change</p>
         <p className={`text-2xl font-semibold mt-1 ${summary.totalChange >= 0 ? 'text-emerald-500' : 'text-red-500'}`}>{formatCurrency(summary.totalChange)}</p>
         <p className={`text-xs mt-1 ${summary.totalChangePercent >= 0 ? 'text-emerald-500' : 'text-red-500'}`}>{formatPercentage(summary.totalChangePercent)}</p>
       </div>
