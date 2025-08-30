@@ -22,11 +22,12 @@ The package.json has been updated with:
 - React DOM: `^18.3.1`
 - React Types: `^18`
 
-### Step 2: Fix ESLint Errors (Already Done)
-The following ESLint errors have been fixed:
+### Step 2: Fix ESLint and TypeScript Errors (Already Done)
+The following errors have been fixed:
 - Fixed unescaped apostrophe in PortfolioSummary.tsx (`Today's` → `Today&apos;s`)
 - Removed `any` type in PortfolioTable.tsx (proper typing for header click handler)
 - Added proper TypeScript types for CustomTooltip in StockChart.tsx
+- Fixed Promise.all typing issue in portfolio API route
 
 ### Step 3: Configure Environment Variables in Vercel
 
